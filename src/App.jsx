@@ -4,7 +4,6 @@ import Modal from "../src/components/Modal";
 
 import "../src/styles/App.css";
 
-const quizURL = "https://example.com/quiz";
 const audio = new Audio("/clock-ticking.mp3");
 
 function App() {
