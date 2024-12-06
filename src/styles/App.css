@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../../public/fonts/RoxboroughCF.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../../public/fonts/Montserrat-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-Bold.woff") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Image de fond pour l'application */
+body {
+  background-image: url("../../public/BrandQuest-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur du titre */
+.title-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+  z-index: 1;
+}
+
+.title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/brandQuest-logo-no-title.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.app-title {
+  font-family: "RoxboroughCF", serif;
+  font-size: 2.5em;
+  color: #000;
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  font-family: "RoxboroughCF", serif;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: "Montserrat-Regular", sans-serif;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.progress-circle {
+  width: 15rem;
+  height: 15rem;
+}
+
+.timer-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.app-options,
+.app-finish {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  margin: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.start,
+.pause {
+  background-color: #af8260;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.start:hover,
+.pause:hover {
+  transform: scale(1.05);
+  color: #fff;
+  background: #803d3b;
+}
+
+.start:active,
+.pause:active {
+  transform: scale(0.95);
+}
+
+.actions {
+  background-color: #af8260;
+  color: #fff;
+}
+.actions:hover {
+  transform: scale(1.05);
+}
